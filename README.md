@@ -1,1 +1,1 @@
-# hack-fs-meme-lord-nft-game
+# Meme Lord Adventure NFT Game
