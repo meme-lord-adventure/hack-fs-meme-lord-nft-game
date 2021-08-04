@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 To run this clone the repository on your local computer
 
 cd into cloned version
@@ -30,7 +29,10 @@ This should get the frontend running on localhost://3000 and backend on localhos
 
 =======
 # hack-fs-meme-lord-nft-game
->>>>>>> first commit
+ first commit
 =======
 # Meme Lord Adventure NFT Game
->>>>>>> Update README.md
+ Update README.md
+=======
+# Meme Lord Adventure NFT Game
+>>>>>>> 9e7c51d832fae8bee265275732e21f3da427efc0
