@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import { AppBar, Button, Card, Container, IconButton, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Button, Card,CardContent,CardActions, Container, IconButton, Toolbar, Typography } from '@material-ui/core';
 
 import NewMemberForm from './NewMemberForm.js';
 import Arrowdown from '@material-ui/icons/ExpandMore';
@@ -328,6 +328,7 @@ export default function Header(){
 
     const [popup, setPopup] = useState(false)
     const classes = useStyles();
+    const [formopen, setOpen] = useState(false)
 
     return(
         
@@ -347,10 +348,19 @@ export default function Header(){
             </IconButton>
             <Typography className = {classes.title2}><br />Earn unique NFT's and crypto while playing!</Typography>
             
-            <Button className = {classes.buttons} variant="filled" >
+            <Button className={classes.buttons} variant = "outlined" onClick={() => setOpen(true)}>
         Learn More
       </Button>
-      
+      <Modal open={formopen} onClose={() => setOpen(false)} center>
+      <div className = {classes.root}>
+      <Container>
+            <h1>
+            Rare Vitalik Butterin
+            </h1>
+
+      </Container>
+        </div>
+        </Modal>
         <MetamaskConnect></MetamaskConnect>
       <NewMemberForm className = {classes.form}></NewMemberForm>
     
@@ -385,7 +395,7 @@ export default function Header(){
                 </Container>
       
             </Container>
-            
+    
             
 
          
