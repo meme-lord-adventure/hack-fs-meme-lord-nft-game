@@ -4,6 +4,8 @@ cd into cloned version
 
 Type:
 cd server
+
+Run:
 npm i
 node serverapp.js
 
@@ -12,6 +14,8 @@ then cd back into root
 Type:
 cd client
 cd clientreactapp
+
+Run:
 npm i
 npm start
 
