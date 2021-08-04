@@ -355,7 +355,7 @@ export default function Header(){
       <div className = {classes.root}>
       <Container>
             <h1>
-            Rare Vitalik Butterin
+            Rare Vitalik Butterin and More!
             </h1>
 
       </Container>
