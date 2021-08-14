@@ -1,0 +1,85 @@
+<html>
+<head>
+     <style>
+        .unlock-content {
+  display: none;
+}
+
+.unlock-content .locked {
+  display: none;  
+}
+
+.unlock-content .unlocked {
+  display: none;
+  
+}
+    </style>
+    <script>
+        (function(d, s) {
+          var js = d.createElement(s),
+            sc = d.getElementsByTagName(s)[0];
+          js.src = "https://paywall.unlock-protocol.com/static/unlock.latest.min.js";
+          sc.parentNode.insertBefore(js, sc);
+        }(document, "script"));
+      </script>
+      
+      <script>
+        var unlockProtocolConfig = {
+            "network": "4", // Network ID (1 is for mainnet, 4 for rinkeby, 100 for xDai, etc)  
+            "locks": {
+              "0x59f09e3932C66486F4201a13e45C92fAB8e8bE76": {
+                "name": "Unlock Members"
+              }
+            },
+            "icon": "https://unlock-protocol.com/static/images/svg/unlock-word-mark.svg",
+            "callToAction": {
+              "default": "Please unlock this Meme Lord game file"
+            }
+          }
+      </script>
+      
+
+
+ 
+</head>
+<body>
+    <h1>Unlock Meme Lord game file</h1>
+    <p class="unlock-content locked">Meme Lord game file is currently locked 🔒 </p>
+    <p class="unlock-content unlocked">Meme Lord game file is currently unlocked 🎉
+      <a href="https://ampdemo.azureedge.net/">Here is Meme Lord game file</a>
+    </p>
+    <p class="unlock-content locked" onclick="window.unlockProtocol && window.unlockProtocol.loadCheckoutModal()"><button class="button">
+    Unlock!
+    </button></p>
+
+    <script>
+        window.addEventListener('unlockProtocol.status', function(event) {
+          // We hide all .unlock-content elements
+            console.log(event);
+          document.querySelector('.unlock-content').style.display = "none"
+          // We show only the relevant element
+          document.querySelectorAll(`.unlock-content.${event.detail.state}`).forEach((element) => {
+              console.log(element);
+              element.style.display = "block"
+          })
+          })
+
+          window.addEventListener('unlockProtocol.authenticated', function(event) {
+              // event.detail.addresss includes the address of the current user, when known
+
+              console.log(event);
+              //window.location = "http://localhost:4000/unlock-test-2.html"
+
+          })
+
+          window.addEventListener('unlockProtocol.transactionSent', function(event) {
+              // event.detail.hash includes the hash of the transaction sent
+              console.log(event);
+              
+          })
+
+
+    </script>
+   
+</body>
+</html>
