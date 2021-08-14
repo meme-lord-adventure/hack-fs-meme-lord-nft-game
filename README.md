@@ -28,9 +28,6 @@ This should get the frontend running on localhost://3000 and backend on localhos
 
 
 =======
-# hack-fs-meme-lord-nft-game
- first commit
-=======
 # Meme Lord Adventure NFT Game
  main
  Update README.md
