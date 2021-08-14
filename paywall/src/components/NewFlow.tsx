@@ -28,7 +28,7 @@ export default function NewFlow({ address, token }: NewFlowProps) {
     return (
         <div className='card'>
             <div className='card-header'>
-                <h3>Create New Flow</h3>
+                <h3>Buy Meme Lord Subscription</h3>
             </div>
             <div className='card-content'>
                 <p>Recipient Address: </p>

@@ -26,7 +26,7 @@ export default function Details(props: DetailsProps) {
     return (
         <div className='details'>
             <div className='card-header'>
-                <h3>Superfluid User Details</h3>
+                <h3>Meme Lord Adventure Game User Details</h3>
             </div>
             <div className='card-content'>
                 <p>

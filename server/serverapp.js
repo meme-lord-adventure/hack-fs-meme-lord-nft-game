@@ -29,3 +29,10 @@ app.get('/connect',getRoutesConnect);
 app.get('/explore',getRoutesExplore);
 app.get('/members',getRoutesMembers);
 app.post('/members',postRoutesMembers);
+
+app.get('/getmemetokenbalance', (req, res) => {
+    var secretKey = process.env.SECRET_KEY;
+    request('https://api.covalenthq.com/v1/80001/address/' + req.query.address + '/balances_v2/?key=' + secretKey, function(err, res, body) {
+    console.log(body);
+});
+})
